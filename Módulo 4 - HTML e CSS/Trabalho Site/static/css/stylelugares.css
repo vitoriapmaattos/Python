@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    background-color: whitesmoke;
+    font-size: 20px !important;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    font-weight: 300;
+    line-height: 1.65;
+}
+
+.cabecalho {
+    background-image: url("../img/mapa.jpg");
+    background-color: #C5E5E3;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;  
+}
+
+.container_cabecalho {
+    width: 90%;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.logo{
+    height: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    object-fit: cover;
+}
+
+.site-title {
+    font-size: 1.875rem; 
+    margin-bottom: auto;
+    margin-top: auto;
+    color: #0A0702;
+    text-shadow: 0.1em 0.1em 0.05em wheat;
+    /* text-shadow para sobras */
+    text-align: center;
+}
+
+.container_menu {
+    background-color: #FDDE09;
+    text-align: center;
+    margin-top: 0rem;
+}
+
+.menu_itens {
+    display: inline-block;
+    font-size: 1.3em;
+    list-style: none;
+    padding: .9375rem 3.125rem .9375rem 3.125rem;
+    text-transform: uppercase;
+    /* text-transforme uppercase para deixar maiusculo */
+}
+
+.itens{
+    text-decoration: none;
+    padding-bottom: .3125rem;
+    color: #0A0702;
+    font-weight: bold;
+}
+
+.itens:hover{
+    border-bottom: .1875rem solid #3CB2A4;
+    color: #3EB2AA;
+    font-weight: bold;
+}
+
+.title{
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    text-shadow: 0.1em 0.1em 0.05em wheat;
+    padding-bottom: 1.5rem;
+}
+
+.resumo{
+    font-size: .9375rem;
+    text-align:justify;
+    margin: 0 1.25rem 0;
+}
+
+.subtitle{
+    display: block;
+    background-size: 100%;
+    font-size: 1.875rem;
+    text-align: center;
+    border-bottom: solid .375rem #3cb2a47b;
+    padding-top: 1.5625rem;
+    padding-bottom: 1.5625rem;
+}
+
+.infoviagem {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.infoviagem p{
+    font-size: 1.25rem;
+    padding-bottom: 1.25rem;
+
+}
+
+.info {
+    align-items: center;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.destaques {
+    list-style:circle
+}
+
+.destaques p {
+    font-size: 1.25rem;
+}
+
+.intro {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1.5625rem;
+    padding-top: 1.5625rem;
+}
+
+.lugar{
+    font-size: 1.25rem;
+    text-transform: capitalize;
+}
+
+.imagem {
+    height: 300px;
+    width: 300px;
+    border: #fff;
+    transition: all 0.3s linear;
+    transition: transform .5s ease;
+}   
+
+.imagem:hover {
+    box-shadow: 0 0 1.875rem wheat;
+    border: solid 10px #fff;
+    transform: scale(1.4);
+}
+
+.comentarios p{
+    font-size: .9375rem;
+    font-style: italic;
+    display: block;
+    text-align: center;
+    margin: 0 1.25rem 0;
+    
+}
+
+footer {
+    padding: 2.5rem 0 0 0;
+    text-align: center;
+    font-size: .625rem;
+}
+
+@media screen and (min-width: 360px) {  
+    html {
+        font-size: 12px !important;
+    }
+
+    .container_cabecalho{
+        display: block;
+        text-align: center;
+    }
+    
+    .site-title {
+        margin: .125rem;
+    }
+
+    .menu_itens {
+        font-size: 0.8rem;
+        padding: .3125rem .3125rem 0 .3125rem;
+    }
+    
+    .itens{
+        padding-bottom: .125rem;
+    }
+    
+    .title{
+        padding-top: .125rem;
+        text-align: center;
+        font-size: 1.6rem;
+    }
+
+    .main__container h3{
+        font-size: 1.4rem;
+        border-bottom: solid .0938rem #3cb2a47b;
+    }
+    
+    .intro {
+        display:block;
+    }
+    
+    .lugar {
+        font-size: 1.2rem;
+    }
+     
+    .imagem {
+        height: 10em;
+        width: 10em;
+    }   
+    
+    footer {
+        font-size: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 480px) {
+
+    html {
+        font-size: 14px !important;
+    }
+
+    .container_cabecalho{
+        display: block;
+        text-align: center;
+    }
+
+    .site-title {
+        font-size: 1.0rem;
+        margin: .125rem;
+    }
+
+    .menu_itens {
+        font-size: 0.8rem;
+        padding: .3125rem .3125rem 0 .3125rem;
+    }
+    
+    .itens{
+        padding-bottom: .125rem;
+    }
+    
+    .title{
+        padding-top: .125rem;
+        text-align: center;
+        font-size: 2.0rem;
+    }
+
+    .main__container h3{
+        font-size: 1.6rem;
+        border-bottom: solid .125rem #3cb2a47b;
+    }
+    
+    .intro {
+        display:block;
+    }
+    
+    .lugar {
+        font-size: 1.4rem;
+    }
+     
+    .imagem {
+        height: 20em;
+        width: 20em;
+    }   
+    
+    footer {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (min-width: 735px) {
+
+    html {
+        font-size: 15px !important;
+    }
+
+    .container_cabecalho{
+        display: block;
+        text-align: center;
+    }
+
+    .site-title {
+        font-size: 1.3rem;
+        margin: .125rem;
+    }
+
+    .menu_itens {
+        font-size: 1.0rem;
+        padding: .5rem 1.25rem .5rem 1.25rem;
+    }
+    
+    .itens{
+        padding-bottom: .25rem;
+    }
+    
+    .title{
+        padding-top: .125rem;
+        text-align: center;
+        font-size: 2.2rem;
+    }
+
+    .main__container h3{
+        font-size: 1.8rem;
+        border-bottom: solid .1875rem #3cb2a47b;
+    }
+    
+    .intro {
+        display:block;
+    }
+    
+    .lugar {
+        font-size: 1.6rem;
+    }
+     
+    .imagem {
+        height: 20em;
+        width: 20em;
+    }   
+    
+    footer {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (min-width: 980px) {
+
+    html {
+        font-size: 16px !important;
+    }
+
+    .container_cabecalho{
+        display: block;
+        text-align: center;
+    }
+
+    .site-title {
+        font-size: 1.5rem;
+        margin: .125rem;
+    }
+
+    .menu_itens {
+        font-size: 1.2em;
+        padding: .625rem 1.5625rem .625rem 1.5625rem;
+    }
+    
+    .itens{
+        padding-bottom: .375rem;
+    }
+    
+    .title{
+        padding-top: .125rem;
+        text-align: center;
+        font-size: 2.4rem;
+    }
+
+    .main__container h3{
+        font-size: 2.0rem;
+        border-bottom: solid .25rem #3cb2a47b;
+    }
+    
+    .lugar {
+        font-size: 1.8rem;
+    }
+     
+    .imagem {
+        height: 15em;
+        width: 15em;
+    }   
+    
+    footer {
+        font-size: 1.0rem;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    html {
+        font-size: 18px !important;
+    }
+
+    .site-title {
+        font-size: 1.8rem;
+    }
+
+    .menu_itens {
+        font-size: 1.8rem;
+        padding: 1.25rem 2.1875rem 1.25rem 2.1875rem;
+    }
+    
+    .itens{
+        padding-bottom: .625rem;
+    }
+    
+    .title{
+        padding-top: .125rem;
+        text-align: center;
+        font-size: 3.5rem;
+    }
+
+    .main__container h3{
+        font-size: 2.2rem;
+        border-bottom: solid .3125rem #3cb2a47b;
+    }
+
+    .intro {
+        display:flex;
+    }
+    
+    .lugar {
+        font-size: 2.0rem;
+    }
+     
+    .imagem {
+        height: 20em;
+        width: 20em;
+    }   
+    
+    footer {
+        font-size: 1.0rem;
+    }
+}
+
+@media screen and (min-width: 1680px) {
+
+    html {
+        font-size: 20px !important;
+    }
+
+    .site-title {
+        font-size: 2.rem;
+    }
+
+    .menu_itens {
+        font-size: 1.6rem;
+        padding: .625rem .25rem .625rem 2.5rem;
+    }
+    
+    .itens{
+        padding-bottom: .3125rem;
+    }
+    
+    .title{
+        padding-top: .125rem;
+        text-align: center;
+        font-size: 4.0rem;
+    }
+
+    .main__container h3{
+        font-size: 2.5rem;
+        border-bottom: solid .375rem #3cb2a47b;
+    }
+
+    .intro {
+        display:flex;
+    }
+    
+    .lugar {
+        font-size: 2.0rem;
+    }
+     
+    .imagem {
+        height: 20em;
+        width: 20em;
+    }   
+    
+    footer {
+        font-size: 1.0rem;
+    }
+}

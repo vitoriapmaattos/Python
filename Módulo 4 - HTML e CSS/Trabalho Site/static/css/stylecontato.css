@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    background-color: whitesmoke;
+    font-size: 20px !important;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    font-weight: 300;
+    line-height: 1.65;
+}
+
+.cabecalho {
+    background-image: url("../img/mapa.jpg");
+    background-color: #C5E5E3;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;  
+}
+
+.container_cabecalho {
+    width: 90%;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.logo{
+    height: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    object-fit: cover;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    margin-bottom: auto;
+    margin-top: auto;
+    color: #0A0702;
+    text-shadow: 0.1em 0.1em 0.05em wheat;
+    /* text-shadow para sobras */
+    text-align: center;
+}
+
+.container_menu {
+    background-color: #FDDE09;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.menu_itens {
+    display: inline-block;
+    font-size: 1.3em;
+    list-style: none;
+    align-items: center;
+    text-transform: uppercase;
+    padding: .9375rem 3.125rem .9375rem 3.125rem;
+    /* text-transforme uppercase para deixar maiusculo */
+}
+
+.itens{
+    text-decoration: none;
+    padding-bottom: .3125rem solid #3CB2A4;
+    color: #0A0702;
+    font-weight: bold;
+}
+
+.main-contact {
+    width: 31.25rem;
+    margin: 0 auto;
+    font-size: 1.25rem;
+}
+
+.form-contact {
+    margin: 2.5rem 0;
+ }
+
+.entry-label {
+    display: block;
+    margin: .5rem auto;
+    width: 50%;
+}
+
+.entry, .form-contact textarea {
+    display: block;
+    margin: 0 auto 1.5625rem;
+    padding: .25rem;
+    width: 50%;
+    box-sizing: border-box;
+    resize: none;
+    overflow: auto;
+}
+
+#checkbox, .div-entry {
+    margin: 1.875rem auto;
+}
+
+
+footer {
+    padding: 40px 0 0 0;
+    text-align: center;
+    font-size: 10pt;
+}
+
+@media screen and (max-width: 360px) {  
+    .container{
+        display: block;
+        text-align: center;
+    }
+    
+    .site-title {
+        font-size: 1.0em;
+        margin: 2px;
+    }
+
+    .menu_itens {
+        font-size: 0.8em;
+        padding: 5px 5px 0 5px;
+    }
+    
+    .itens{
+        padding-bottom: 2px;
+    }
+    
+    .main-contact {
+        width: auto;
+        font-size: 1.0em;    
+    }
+    
+    .form-contact {
+        margin: center;
+     }
+    
+    .entry-label {
+        display: block;
+        margin: 8px auto;
+        width: 50%;
+    }
+    
+    .entry, .form-contact textarea {
+        display: block;
+        margin: 0 auto 25px;
+        padding: 4px 9px;
+        font-size: 18px;
+        width: 50%;
+        box-sizing: border-box;
+        resize: none;
+        overflow: auto;
+    }
+    
+    #checkbox, .div-entry {
+        margin: 30px auto;
+    }
+    
+    footer {
+        font-size: 0.5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .container{
+        display: block;
+        text-align: center;
+    }
+
+    .site-title {
+        font-size: 1.0em;
+        margin: 2px;
+    }
+
+    .menu_itens {
+        font-size: 0.8em;
+        padding: 5px 5px 0 5px;
+    }
+    
+    .itens{
+        padding-bottom: 2px;
+    }
+    
+    .title{
+        padding-top: 2px;
+        text-align: center;
+        font-size: 2.0em;
+    }
+    
+    .intro {
+        display:block;
+    }
+    
+    .nome {
+        font-size: 2.0em;
+    }
+     
+    .imagem {
+        height: 20em;
+        width: 20em;
+    }   
+    
+    footer {
+        font-size: .8em;
+    }
+}
+
+@media screen and (max-width: 735px) {
+
+    .container{
+        display: block;
+        text-align: center;
+    }
+
+    .site-title {
+        font-size: 1.3em;
+        margin: 2px;
+    }
+
+    .menu_itens {
+        font-size: 1.0em;
+        padding: 8px 20px 8px 20px;
+    }
+    
+    .itens{
+        padding-bottom: 4px;
+    }
+    
+    .title{
+        padding-top: 2px;
+        text-align: center;
+        font-size: 2.2em;
+    }
+    
+    .intro {
+        display:block;
+    }
+    
+    .nome {
+        font-size: 2.0em;
+    }
+     
+    .imagem {
+        height: 20em;
+        width: 20em;
+    }   
+    
+    footer {
+        font-size: .8em;
+    }
+}
+
+@media screen and (max-width: 980px) {
+
+    .container{
+        display: block;
+        text-align: center;
+    }
+
+    .site-title {
+        font-size: 1.5em;
+        margin: 2px;
+    }
+
+    .menu_itens {
+        font-size: 1.2em;
+        padding: 10px 25px 10px 25px;
+    }
+    
+    .itens{
+        padding-bottom: 6px;
+    }
+    
+    .title{
+        padding-top: 2px;
+        text-align: center;
+        font-size: 2.4em;
+    }
+    
+    .intro {
+        display:block;
+    }
+    
+    .nome {
+        font-size: 1.6em;
+    }
+     
+    .imagem {
+        height: 15em;
+        width: 15em;
+    }   
+    
+    footer {
+        font-size: 1.0em;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+    .site-title {
+        font-size: 1.8em;
+    }
+
+    .menu_itens {
+        font-size: 1.8em;
+        padding: 20px 35px 20px 35px;
+    }
+    
+    .itens{
+        padding-bottom: 10px;
+    }
+    
+    .title{
+        padding-top: 2px;
+        text-align: center;
+        font-size: 3.5em;
+    }
+    
+    .nome {
+        font-size: 2.2em;
+    }
+     
+    .imagem {
+        height: 20em;
+        width: 20em;
+    }   
+    
+    footer {
+        font-size: 1.0em;
+    }
+}
+
+@media screen and (max-width: 1680px) {
+
+    .site-title {
+        font-size: 2.0em;
+    }
+
+    .menu_itens {
+        font-size: 1.6em;
+        padding: 10px 40px 10px 40px;
+    }
+    
+    .itens{
+        padding-bottom: 5px;
+    }
+    
+    .title{
+        padding-top: 2px;
+        text-align: center;
+        font-size: 4.0em;
+    }
+    
+    .nome {
+        font-size: 2.5em;
+    }
+     
+    .imagem {
+        height: 20em;
+        width: 20em;
+    }   
+    
+    footer {
+        font-size: 1.0em;
+    }
+}
