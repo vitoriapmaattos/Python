@@ -302,6 +302,7 @@ let Mary = {
 
 let arr = [John, Pete, Mary];
 
+
 const getAverageAge = (arr) => arr.reduce((acc, val)) ; acc + val.age, 0 / arr.length;
 alert(getAverageAge(arr));
 */

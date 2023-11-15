@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="static/js/jquery-3.7.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>Exercicios</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class="exercicio1 container">
+        <h2>Exercício 1</h2>
+        <p>Clique para revelar um segredo!</p>
+        <button id="clicker">Mostrar</button>
+        <p id="secret" style="display: none">
+        Se você escrever `import this` em um arquivo python e executá-lo você conseguirá visualizar o Zen de Python.</p>
+    </div>
+
+    <div class="exercicio3 container">
+        <h2>Exercício 3</h2>
+        <p>Criando um contador!</p>
+        <div class="contador">
+            <button class=button id="decrement">-</button> 
+            <p class="counter">0</p>
+            <button class=button id="increment">+</button>
+        </div>
+    </div>
+
+    <div class="exercicio4 container" id="stopwatch">
+        <h2>Exercício 4</h2>
+        <p id="timer">
+            00:00:00:00
+        </p>
+        <div id="actions">
+            <button id="reset">
+                <i class="bi bi-repeat"></i>
+            </button>
+            <button id="power" action="start">
+                <i class="bi bi-play-circle"></i>
+            </button>
+            <button id="mark">
+                <i class="bi bi-flag-fill"></i>
+            </button>
+            <div id="marks-list">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="exercicio5 container">
+        <h2>Exercício 5</h2>
+        <!-- resolução no html para ser mais rápido -->
+        <table id="peopleTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Sexo</th>
+                <tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+      
+    </div>
+
+    <div class="exercicio6 container">
+        <h2>Exercício 6</h2>
+        <div class="grid-container">
+            <div class="grid-item selected">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+        </div>
+        <p>Quadrado selecionado: <span id="selected-square">1</span></p>    
+    </div>
+    <script src="static/js/exercícios.js"></script>
+</body>
+</html>
