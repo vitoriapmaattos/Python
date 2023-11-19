@@ -1,0 +1,7 @@
+.hide-mensagem {
+    display: none;
+}
+
+.show-mensagem {
+    display: block;
+}
