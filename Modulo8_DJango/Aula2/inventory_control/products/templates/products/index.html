@@ -36,6 +36,7 @@
           <th>ID</th>
           <th>Foto</th>
           <th>Nome</th>
+          <th>Categoria</th>
           <th>Preço de venda</th>
           <th>Data de expiração</th>
           <th>Ativo</th>
@@ -49,9 +50,14 @@
             <td>
               {% if product.thumbnail %}
                 <img class="img-fluid" heigth="30" width="30" src="{{ product.thumbnail.url }}" alt="Foto do produto: {{product.name}}">
+              {% else %}
+                Sem foto
               {% endif %}
             </td>
             <td>{{ product.name|title|truncatechars:20 }}</td>
+            <td>{{ product.category|title|default:"Sem categoria" }}</td>
+
+
             <td>R$ {{ product.sale_price|floatformat:2 }}</td>
             <td>
               {% if product.is_perishable %}

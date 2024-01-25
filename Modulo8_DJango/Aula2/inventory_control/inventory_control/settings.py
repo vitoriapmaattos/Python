@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'suppliers.apps.SuppliersConfig',
     'products.apps.ProductsConfig',
+    'crispy_forms',
+    "crispy_bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -136,3 +138,9 @@ MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
 # Configurando arquivos de media para desenvolvimento
 MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media/"
+
+#Crispy Config
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"

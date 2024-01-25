@@ -32,7 +32,7 @@ def search(request):
     # Filtrando os Produtoes
     # O Q é usado para combinar filtros (& ou |)
     products = Product.objects \
-        .filter(name__icontains=search_value) \
+        .filter(Q(name__icontains=search_value) |Q(category__name__icontains=search_value) ) \
         .order_by("-id")
     
     # Criando o paginator
@@ -48,7 +48,7 @@ def create(request):
     form_action = reverse("products:create")
     #POST
     if request.method == 'POST':
-        form = ProductForm(request.POST)
+        form = ProductForm(request.POST, request.FILES)
         
         if form.is_valid():
             form.save()
@@ -76,9 +76,13 @@ def update(request, slug):
     
     # POST
     if request.method == "POST":
-        form = ProductForm(request.POST, instance=product)
+        form = ProductForm(request.POST, request.FILES, instance=product)
         
         if form.is_valid():
+            
+            if form.cleaned_data["photo"] is False:
+                product.thumbnail.delete(save=False)
+                
             form.save()            
             messages.success(request, "Produto atualizado com sucesso")            
             return redirect("products:index")
