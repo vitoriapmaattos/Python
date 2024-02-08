@@ -1,5 +1,5 @@
 jQuery(function() {
-    // Código responsável por atualizar o menu de navegação
+    // Código responsável por atualizar o menu de navegação.
     const currentLocation = location.pathname;
     const $menuItems = $(".nav-link");
 
@@ -12,4 +12,7 @@ jQuery(function() {
             $menu.attr("class", "nav-link link-dark");
         }
     });
+
+    // Habilitar os toasts de notificação
+    $(".toast").toast("show");
 });

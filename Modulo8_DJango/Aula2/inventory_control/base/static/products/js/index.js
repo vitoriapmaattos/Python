@@ -1,17 +1,25 @@
 jQuery(function() {
-    const $enabledCheckbox = $(".form-check-input");
+    const $modal = $("#suppliersModal");
 
-    $enabledCheckbox.on("click", function() {
-        const url = $(this).data("url");
+    $modal.on("show.bs.modal", function(e) {
+        const $button = $(e.relatedTarget);
 
-        fetch(url, {
-            method: "POST",
-            headers: {
-                "X-CSRFToken": Cookies.get("csrftoken")
-            }
-        })
-        .then(res => res.json())
-        .then(data => console.log(data))
-        .catch(console.error);
+        const url = $button.data("url");
+
+        fetch(url)
+            .then(response => response.json())
+            .then(suppliers => {
+                const $suppliersTableBody = $("#suppliersTableBody");
+                $suppliersTableBody.empty();
+
+                suppliers.forEach(supplier => {
+                    const $row = $("<tr></tr>");
+                    $row.append($("<td>").text(supplier.name));
+                    $row.append($("<td>").text(supplier.cost_price));
+
+                    $suppliersTableBody.append($row);
+                })
+            })
+            .catch(console.error)
     });
 });

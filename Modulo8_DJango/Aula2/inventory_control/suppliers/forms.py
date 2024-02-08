@@ -40,4 +40,3 @@ class SupplierForm(forms.ModelForm):
         
         return zipcode
     
-    

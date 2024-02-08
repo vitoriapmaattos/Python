@@ -6,10 +6,39 @@
 {% endblock %}
 {% block head %}
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
-  <script src="{% static 'products/js/index.js' %}"></script>
+  <script src="{% static 'base/js/index.js' %}"></script>
+  <script src={% static 'products/js/index.js' %}></script>
 {% endblock  %}
 {% block content %}
   <h2 class="mb-3">Produtos</h2>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="suppliersModal" tabindex="-1" aria-labelledby="suppliersModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="suppliersModalLabel">Fornecedores</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Preço de custo</th>
+              </tr>
+            </thead>
+            <tbody id="suppliersTableBody">
+
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <a 
     href="{% url 'products:create' %}" 
@@ -37,6 +66,7 @@
           <th>Foto</th>
           <th>Nome</th>
           <th>Categoria</th>
+          <th>Estoque</th>
           <th>Preço de venda</th>
           <th>Data de expiração</th>
           <th>Ativo</th>
@@ -49,19 +79,18 @@
             <td>{{ product.id }}</td>
             <td>
               {% if product.thumbnail %}
-                <img class="img-fluid" heigth="30" width="30" src="{{ product.thumbnail.url }}" alt="Foto do produto: {{product.name}}">
+                <img src="{{ product.thumbnail.url }}" height="30" width="30" alt="{{ product.name }}" class="img-fluid rounded" />
               {% else %}
                 Sem foto
               {% endif %}
             </td>
             <td>{{ product.name|title|truncatechars:20 }}</td>
-            <td>{{ product.category|title|default:"Sem categoria" }}</td>
-
-
+            <td>{{ product.category.name|title|default:"Sem categoria" }}</td>
             <td>R$ {{ product.sale_price|floatformat:2 }}</td>
+            <td>R$ {{ product.quantify|floatformat:2 }}</td>
             <td>
               {% if product.is_perishable %}
-                {{product.expiration_date|date:"d/m/Y"}}
+                {{ product.expiration_date|date:"d/m/Y" }}              
               {% else %}
                 Não perecível
               {% endif %}
@@ -70,6 +99,9 @@
               <input {% if product.enabled %}checked{% endif %} data-url="{% url 'products:toggle_enabled' product.id %}" type="checkbox" class="form-check-input" />
             </td>
             <td class="d-flex gap-1">
+              <button title="fornecedores do produto" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#suppliersModal">
+                <i class="bi bi-box"></i>
+              </button>
               <a href="{% url 'products:update' product.slug %}" class="btn btn-warning btn-sm" title="editar produto"><i class="bi bi-pencil"></i></a>
               <form method="post" action="{% url 'products:delete' product.id %}">
                 {% csrf_token %}
@@ -84,8 +116,7 @@
         {% endfor %}
       </tbody>
     </table>
-    
-    <!-- Paginação -->
+    {% comment %}Paginação{% endcomment %}
     {% if products.paginator.num_pages > 1 %}
       <nav aria-label="Paginação da página">
         <ul class="pagination justify-content-end">
